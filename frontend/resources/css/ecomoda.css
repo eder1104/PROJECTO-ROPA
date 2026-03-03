@@ -1,0 +1,60 @@
+:root {
+    --ecomoda-bone: #F9F8F4;
+    --ecomoda-black: #1A1A1A;
+    --ecomoda-gold: #C5A059;
+    --ecomoda-charcoal: #333333;
+}
+
+body {
+    background-color: var(--ecomoda-bone);
+    color: var(--ecomoda-black);
+    font-family: 'Playfair Display', serif;
+}
+
+.high-end-card {
+    background: white;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    transition: all 0.3s ease;
+}
+
+.legal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.legal-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.legal-link:hover {
+    color: var(--ecomoda-gold);
+}
+
+.high-end-card:hover {
+    border-color: var(--ecomoda-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.btn-premium {
+    background-color: var(--ecomoda-black);
+    color: var(--ecomoda-bone);
+    padding: 12px 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-premium:hover {
+    background-color: var(--ecomoda-gold);
+}
+
+.text-gold {
+    color: var(--ecomoda-gold);
+}
+
+.bg-charcoal {
+    background-color: var(--ecomoda-charcoal);
+}
