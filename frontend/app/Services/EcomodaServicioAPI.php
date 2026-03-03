@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
 
-class EcomodaApiService
+class EcomodaServicioAPI
 {
     protected $baseUrl;
 
@@ -13,11 +13,11 @@ class EcomodaApiService
         $this->baseUrl = env('PYTHON_API_URL');
     }
 
-    public function calculatePricing(array $items, string $shippingType = 'standard')
+    public function calcularPrecios(array $items, string $tipoEnvio = 'standard')
     {
-        $response = Http::post("{$this->baseUrl}/pricing/calculate", [
+        $response = Http::post("{$this->baseUrl}/precios/calcular", [
             'items' => $items,
-            'shipping_type' => $shippingType
+            'shipping_type' => $tipoEnvio
         ]);
 
         return $response->json();

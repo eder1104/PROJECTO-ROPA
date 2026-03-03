@@ -1,17 +1,17 @@
 from pydantic import BaseModel
 from typing import List
 
-class CartItem(BaseModel):
+class ItemCarrito(BaseModel):
     id: int
     base_price: float
     quantity: int
     category: str
 
-class PricingRequest(BaseModel):
-    items: List[CartItem]
+class SolicitudPrecio(BaseModel):
+    items: List[ItemCarrito]
     shipping_type: str
 
-class PricingResponse(BaseModel):
+class RespuestaPrecio(BaseModel):
     subtotal: float
     tax: float
     shipping: float
